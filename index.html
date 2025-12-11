@@ -156,27 +156,27 @@
   </div>
 </section>
 
-</section>
-<section id="contact" class="section contact">
-  <div class="section-content">
-    <h2>Contact</h2>
-<p class="muted">
-  Investors, partners or individuals can contact SkyFly Aviations using this form.
-</p>
+<section id="contact" class="fade">
+  <h2>Contact</h2>
+  <p class="muted">Investors, partners, or incubators can reach SkyFly Aviations here.</p>
 
-<iframe
-  src="https://docs.google.com/forms/d/e/1FAIpQLSfU_QW2wK-4x2xuaIwo_NHMZvyWp6dXcRHGgKBsgeotJ69KVQ/viewform?embedded=true"
-  width="100%"
-  height="800"
-  frameborder="0"
-  marginheight="0"
-  marginwidth="0"
->
-  Loading…
-</iframe>
+  <form action="https://api.web3forms.com/submit" method="POST" class="card contact">
 
-  </div>
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="125f6c8d-1550-4cc4-8e30-ecc73f179e6b">
+
+    <!-- Form Fields -->
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <!-- Optional Redirect After Submission -->
+    <input type="hidden" name="redirect" value="https://skyflyaviations.in/?message=sent">
+
+    <button type="submit">Send</button>
+  </form>
 </section>
+
 
 </section>
 
