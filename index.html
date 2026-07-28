@@ -34,11 +34,66 @@
   <title>SkyFly Aviations | AeroLifeLine — AI-Powered Emergency Response Platform</title>
   
   <!-- Favicon - All Platforms -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="msapplication-TileColor" content="#060a18">
+  
+  <!-- Preloads for Performance -->
+  <link rel="preload" href="assets/images/logo.png" as="image">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+
+  <!-- Security Headers (via Meta) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+  <!-- SEO: JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://skyflyaviations.in/#organization",
+        "name": "SkyFly Aviations",
+        "url": "https://skyflyaviations.in/",
+        "logo": "https://skyflyaviations.in/assets/images/logo.png",
+        "email": "info@skyflyaviations.in",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Hemanth Kumar"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/skyfly-aviations/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@skyflyaviations.in",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://skyflyaviations.in/#website",
+        "url": "https://skyflyaviations.in/",
+        "name": "SkyFly Aviations - AeroLifeLine",
+        "description": "AI-powered Emergency Response Platform. Future Air Ambulance Integration."
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -182,10 +237,10 @@
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
-          <div class="about-image-wrapper">
-            <div class="about-glow"></div>
-            <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" class="about-product-logo">
-            <div class="about-foundation-badge">
+            <div class="about-image-wrapper">
+              <div class="about-glow"></div>
+              <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" class="about-product-logo" loading="lazy">
+              <div class="about-foundation-badge">
               <i class="fas fa-calendar-check"></i>
               <span>Founded 2026</span>
             </div>
@@ -258,7 +313,7 @@
     <div class="container">
       <div class="text-center" data-aos="fade-up" data-aos-duration="600">
         <span class="section-badge">Our Solution</span>
-        <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" class="solution-logo">
+        <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" class="solution-logo" loading="lazy">
         <h2 class="section-title">The <span class="text-gradient">Complete</span> Emergency Response Platform</h2>
         <p class="section-subtitle">AeroLifeLine connects every stakeholder in the emergency response chain through one intelligent platform.</p>
       </div>
@@ -778,9 +833,9 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="footer-logos">
-              <img src="assets/images/logo.png" alt="SkyFly Aviations" height="35" class="footer-logo">
+              <img src="assets/images/logo.png" alt="SkyFly Aviations" height="35" class="footer-logo" loading="lazy">
               <span class="footer-logo-separator">+</span>
-              <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" height="30" class="footer-product-logo">
+              <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" height="30" class="footer-product-logo" loading="lazy">
             </div>
             <p class="footer-text">SkyFly Aviations — AeroLifeLine</p>
           </div>

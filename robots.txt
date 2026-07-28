@@ -1,4 +1,11 @@
+# SkyFly Aviations - Robots.txt
+# https://skyflyaviations.in
+
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://skyflyaviations.in/sitemap.xml
+
+# Disallow admin paths (if any)
+Disallow: /api/

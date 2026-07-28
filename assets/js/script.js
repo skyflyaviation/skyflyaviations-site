@@ -1,6 +1,6 @@
 /* ============================================
    SkyFly Aviations — AeroLifeLine
-   Premium Animations with GSAP
+   Premium Animations with GSAP & IntersectionObserver
    ============================================ */
 
 // ========== REDUCED MOTION CHECK ==========
@@ -16,15 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initAOS();
   initNavScrollSpy();
   initContactForm();
+  initIntersectionObserverAnimations();
+  initAccessibilityEnhancements();
   
   if (!prefersReducedMotion && !isMobile) {
     initWatermarkAnimation();
     initHeroEntrance();
     initCardTilt();
     initMagneticButtons();
-    initScrollAnimations();
     initParallaxImages();
     initTimelineScroll();
+    initRoadmapScroll();
     initSectionTransitions();
   }
 });
@@ -197,7 +199,7 @@ function initWatermarkAnimation() {
   const watermark = document.querySelector('.watermark-logo');
   if (!watermark || typeof gsap === 'undefined') return;
 
-  // Slow floating rotation animation
+  // Slow floating rotation animation (GPU accelerated)
   gsap.to(watermark, {
     rotation: 360,
     duration: 120,
@@ -351,37 +353,40 @@ function initMagneticButtons() {
   });
 }
 
-// ========== SCROLL ANIMATIONS ==========
-function initScrollAnimations() {
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+// ========== INTERSECTION OBSERVER SCROLL ANIMATIONS (Premium) ==========
+function initIntersectionObserverAnimations() {
+  if (prefersReducedMotion) return;
 
-  // Animate sections on scroll
-  const sections = document.querySelectorAll('.section');
-  sections.forEach((section, index) => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-        invalidateOnRefresh: true
+  // Create a single IntersectionObserver for all scroll animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: [0, 0.1, 0.25]
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scroll-visible');
+        // Stagger animation for cards
+        const cards = entry.target.querySelectorAll('.glass-card, .problem-card, .solution-card, .tech-card, .why-card, .timeline-content, .roadmap-content, .hero-stat-card, .vision-icon-item');
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('scroll-visible');
+          }, index * 80);
+        });
       }
     });
+  }, observerOptions);
 
-    tl.fromTo(section.querySelectorAll('.section-badge, .section-title, .section-subtitle'),
-      { opacity: 0, y: 40, filter: 'blur(4px)' },
-      { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, stagger: 0.15, ease: 'power3.out' }
-    );
-
-    // Animate cards within sections
-    const cards = section.querySelectorAll('.glass-card, .problem-card, .solution-card, .tech-card, .why-card');
-    if (cards.length) {
-      tl.fromTo(cards,
-        { opacity: 0, y: 30, scale: 0.97 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.5, stagger: 0.08, ease: 'power2.out' },
-        '-=0.4'
-      );
-    }
+  // Observe all sections
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
   });
+
+  // Also observe hero stats
+  const heroStats = document.querySelector('.hero-stats-grid');
+  if (heroStats) observer.observe(heroStats);
 }
 
 // ========== PARALLAX IMAGES ==========
@@ -451,8 +456,12 @@ function initTimelineScroll() {
       }
     );
   });
+}
 
-  // Animate roadmap items
+// ========== ROADMAP SCROLL ==========
+function initRoadmapScroll() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
   const roadmapItems = document.querySelectorAll('.roadmap-item');
   
   roadmapItems.forEach((item, index) => {
@@ -527,7 +536,7 @@ function initContactForm() {
       isValid = false;
     }
 
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailInput.value || !emailRegex.test(emailInput.value)) {
       emailInput.classList.add('is-invalid');
       isValid = false;
@@ -540,12 +549,12 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    var originalBtnHtml = submitBtn.innerHTML;
+    const originalBtnHtml = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
     submitBtn.disabled = true;
 
     try {
-      var response = await fetch('/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -559,7 +568,7 @@ function initContactForm() {
         }),
       });
 
-      var data = await response.json();
+      const data = await response.json();
 
       if (response.ok && data.success) {
         statusDiv.className = 'form-status form-status-success';
@@ -585,6 +594,93 @@ function initContactForm() {
       submitBtn.disabled = false;
     }
   });
+}
+
+// ========== ACCESSIBILITY ENHANCEMENTS ==========
+function initAccessibilityEnhancements() {
+  // Keyboard navigation for cards
+  document.querySelectorAll('.glass-card, .problem-card, .solution-card, .tech-card, .why-card, .vision-icon-item').forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
+  // Focus trap for mobile menu
+  const navbarCollapse = document.getElementById('navMenu');
+  if (navbarCollapse) {
+    navbarCollapse.addEventListener('shown.bs.collapse', () => {
+      const focusable = navbarCollapse.querySelectorAll('a, button');
+      if (focusable.length) focusable[0].focus();
+    });
+  }
+
+  // Skip link for keyboard users
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.className = 'skip-link';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.style.cssText = `
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-blue);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 10000;
+    font-weight: 600;
+    text-decoration: none;
+  `;
+  document.body.insertBefore(skipLink, document.body.firstChild);
+  
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '10px';
+  });
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-100%';
+  });
+
+  // Add main content ID if not exists
+  const hero = document.getElementById('hero');
+  if (hero && !hero.id.includes('main')) {
+    hero.id = 'main-content';
+  }
+
+  // Announce loading completion to screen readers
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    const observer = new MutationObserver(() => {
+      if (loadingScreen.classList.contains('loaded')) {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('role', 'status');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.className = 'sr-only';
+        announcement.style.cssText = 'position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;';
+        announcement.textContent = 'Page loaded successfully';
+        document.body.appendChild(announcement);
+        setTimeout(() => announcement.remove(), 1000);
+        observer.disconnect();
+      }
+    });
+    observer.observe(loadingScreen, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // Improve form accessibility
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      const label = document.querySelector(`label[for="${input.id}"]`);
+      if (!label) {
+        input.setAttribute('aria-label', input.placeholder || input.getAttribute('aria-label') || '');
+      }
+    });
+  }
 }
 
 // ========== SMOOTH SCROLL (fallback) ==========

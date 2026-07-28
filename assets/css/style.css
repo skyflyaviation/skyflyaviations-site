@@ -180,6 +180,185 @@ body {
   transform: translateY(0);
 }
 
+/* ---------- Watermark Logo Animation (GPU Accelerated) ---------- */
+.watermark-logo {
+  animation: 
+    floatRotate 120s linear infinite,
+    floatY 6s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes floatRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-30px); }
+}
+
+/* ---------- Hero Entrance Animations ---------- */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translateX(-40px); filter: blur(8px); }
+  to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes heroFadeLeft {
+  from { opacity: 0; transform: translateX(40px); filter: blur(8px); }
+  to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+.hero-badge,
+.hero-title,
+.hero-subtitle,
+.hero-description,
+.hero-buttons,
+.hero-stat-card {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-badge { animation: heroFadeUp 0.8s 0.1s both; }
+.hero-title { animation: heroFadeUp 1s 0.2s both; }
+.hero-subtitle { animation: heroFadeUp 0.8s 0.3s both; }
+.hero-description { animation: heroFadeUp 0.8s 0.4s both; }
+.hero-buttons { animation: heroFadeUp 0.6s 0.5s both; }
+.hero-stat-card:nth-child(1) { animation: heroFadeUp 0.6s 0.6s both; }
+.hero-stat-card:nth-child(2) { animation: heroFadeUp 0.6s 0.7s both; }
+.hero-stat-card:nth-child(3) { animation: heroFadeUp 0.6s 0.8s both; }
+
+/* ---------- Premium Button Effects ---------- */
+.btn-primary,
+.hero-btn,
+.nav-cta,
+.contact-form .btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before,
+.hero-btn::before,
+.nav-cta::before,
+.contact-form .btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::before,
+.hero-btn:hover::before,
+.nav-cta:hover::before,
+.contact-form .btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:focus-visible,
+.hero-btn:focus-visible,
+.hero-btn-outline:focus-visible,
+.nav-cta:focus-visible,
+.contact-form .btn-primary:focus-visible,
+.nav-link:focus-visible,
+.back-to-top:focus-visible,
+.founder-social-link:focus-visible {
+  outline: 2px solid var(--blue-primary);
+  outline-offset: 3px;
+}
+
+.btn-primary:active,
+.hero-btn:active,
+.nav-cta:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ---------- Premium Card Hover Effects ---------- */
+.glass-card,
+.problem-card,
+.solution-card,
+.tech-card,
+.why-card,
+.timeline-content,
+.roadmap-content,
+.hero-stat-card {
+  will-change: transform, box-shadow, border-color;
+  transition: 
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s ease;
+}
+
+.glass-card:hover,
+.problem-card:hover,
+.solution-card:hover,
+.tech-card:hover,
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(26, 107, 255, 0.12);
+  border-color: rgba(26, 107, 255, 0.2);
+}
+
+/* ---------- Icon Animation on Card Hover ---------- */
+.problem-icon,
+.solution-icon,
+.tech-icon,
+.why-icon,
+.stat-icon,
+.vision-highlight-item i,
+.contact-info-item i {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              background 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.glass-card:hover .problem-icon,
+.glass-card:hover .solution-icon,
+.glass-card:hover .tech-icon,
+.glass-card:hover .why-icon,
+.problem-card:hover .problem-icon,
+.solution-card:hover .solution-icon,
+.tech-card:hover .tech-icon,
+.why-card:hover .why-icon {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 0 20px var(--blue-glow);
+}
+
+/* ---------- Smooth Scroll Animation Fallback (CSS-based) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  [data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  [data-aos="fade-up"] { transform: translateY(40px); }
+  [data-aos="fade-up"].aos-animate { transform: translateY(0); }
+  
+  [data-aos="fade-right"] { transform: translateX(-40px); }
+  [data-aos="fade-right"].aos-animate { transform: translateX(0); }
+  
+  [data-aos="fade-left"] { transform: translateX(40px); }
+  [data-aos="fade-left"].aos-animate { transform: translateX(0); }
+  
+  [data-aos="zoom-in"] { transform: scale(0.9); }
+  [data-aos="zoom-in"].aos-animate { transform: scale(1); }
+}
+
 /* ---------- Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -194,6 +373,11 @@ body {
   .watermark-logo {
     animation: none !important;
     opacity: 0.04;
+  }
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
