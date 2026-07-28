@@ -1,0 +1,26 @@
+{
+  "name": "SkyFly Aviations",
+  "short_name": "SkyFly",
+  "description": "AI-Powered Emergency Response Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060a18",
+  "theme_color": "#060a18",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

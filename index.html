@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkyFly Aviations is an Indian HealthTech startup building AeroLifeLine — an AI-powered emergency response platform connecting patients, hospitals, ambulance providers, drivers, and administrators. Future vision: Future Air Ambulance Integration.">
+  <meta name="keywords" content="SkyFly Aviations, AeroLifeLine, emergency response, AI ambulance, healthtech, Indian startup, emergency coordination, ambulance platform, Hemanth Kumar">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SkyFly Aviations">
+  <meta name="theme-color" content="#060a18">
+  <link rel="canonical" href="https://skyflyaviations.in/">
+  
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skyflyaviations.in/">
+  <meta property="og:site_name" content="SkyFly Aviations">
+  <meta property="og:title" content="SkyFly Aviations | AeroLifeLine — AI-Powered Emergency Response Platform">
+  <meta property="og:description" content="Building intelligent healthcare technology that improves emergency response today while creating the foundation for future air ambulance integration.">
+  <meta property="og:image" content="https://skyflyaviations.in/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://skyflyaviations.in/">
+  <meta name="twitter:title" content="SkyFly Aviations | AeroLifeLine — AI-Powered Emergency Response Platform">
+  <meta name="twitter:description" content="Building intelligent healthcare technology that improves emergency response today while creating the foundation for future air ambulance integration.">
+  <meta name="twitter:image" content="https://skyflyaviations.in/assets/images/og-image.png">
+  
+  <!-- WhatsApp / Telegram -->
+  <meta property="og:image:alt" content="SkyFly Aviations - AeroLifeLine Emergency Response Platform">
+
+  <title>SkyFly Aviations | AeroLifeLine — AI-Powered Emergency Response Platform</title>
+  
+  <!-- Favicon - All Platforms -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#060a18">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <img src="assets/images/logo.png" alt="SkyFly Aviations" class="loading-logo">
+      <div class="loading-bar">
+        <div class="loading-bar-inner"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <img src="assets/images/logo.png" alt="SkyFly Aviations" height="40" class="nav-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#solution">AeroLifeLine</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vision">Vision</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== SECTION 1: HERO ========== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-watermark" aria-hidden="true">
+      <img src="assets/images/logo.png" alt="" class="watermark-logo">
+    </div>
+    <div class="hero-bg-animation">
+      <div class="gradient-sphere sphere-1"></div>
+      <div class="gradient-sphere sphere-2"></div>
+      <div class="gradient-sphere sphere-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-badge">
+            <i class="fas fa-microchip"></i>
+            <span>Healthcare Technology Startup</span>
+          </div>
+          <h1 class="hero-title">SkyFly <span class="text-gradient">Aviations</span></h1>
+          <p class="hero-subtitle">Building the Future of <span class="text-gradient">Emergency Medical Mobility</span></p>
+          <p class="hero-description">We're building more than an application—we're creating the digital foundation for the future of emergency response. AeroLifeLine improves coordination between patients, hospitals, and ambulance providers today, while preparing the ecosystem for future air ambulance integration.</p>
+          <div class="hero-buttons">
+            <a href="#solution" class="btn btn-primary btn-lg hero-btn">
+              <i class="fas fa-rocket me-2"></i>Explore AeroLifeLine
+            </a>
+            <a href="#vision" class="btn btn-outline-light btn-lg hero-btn-outline">
+              <i class="fas fa-eye me-2"></i>Our Vision
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+          <div class="hero-stats-grid">
+            <div class="hero-stat-card glass-card">
+              <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+              <h4 class="stat-heading">Development Stage</h4>
+              <div class="stat-label">MVP Under Development</div>
+              <p class="stat-desc">Building the first version of AeroLifeLine.</p>
+            </div>
+            <div class="hero-stat-card glass-card">
+              <div class="stat-icon"><i class="fas fa-ambulance"></i></div>
+              <h4 class="stat-heading">Current Solution</h4>
+              <div class="stat-label">AeroLifeLine Platform</div>
+              <p class="stat-desc">AI-powered emergency response coordination platform.</p>
+            </div>
+            <div class="hero-stat-card glass-card">
+              <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+              <h4 class="stat-heading">Long-Term Vision</h4>
+              <div class="stat-label">Future Air Ambulance Integration</div>
+              <p class="stat-desc">Expanding the emergency ecosystem through future air medical mobility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: WHO WE ARE ========== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+          <div class="about-content">
+            <span class="section-badge">Who We Are</span>
+            <h2 class="section-title">Building India's Intelligent Emergency Response Ecosystem</h2>
+            <p class="about-text">SkyFly Aviations is an Indian <strong>HealthTech startup</strong> focused on emergency response innovation. Our first product <strong>AeroLifeLine</strong> helps hospitals, patients, and ambulance providers coordinate emergencies faster using <strong>AI and cloud technology</strong>.</p>
+            <p class="about-text">Instead of waiting years to launch autonomous aircraft, we decided to solve today's emergency coordination challenges first. This approach creates <strong>immediate impact</strong> while building the digital infrastructure for tomorrow's future air medical mobility.</p>
+            <div class="about-highlights">
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Indian HealthTech Innovation</span>
+              </div>
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>AI-Powered Coordination Platform</span>
+              </div>
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Immediate Impact Today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+          <div class="about-image-wrapper">
+            <div class="about-glow"></div>
+            <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" class="about-product-logo">
+            <div class="about-foundation-badge">
+              <i class="fas fa-calendar-check"></i>
+              <span>Founded 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: PROBLEM ========== -->
+  <section id="problem" class="section problem-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">The Challenge</span>
+        <h2 class="section-title">Every Minute <span class="text-gradient">Matters</span></h2>
+        <p class="section-subtitle">India's emergency response system faces critical challenges that cost lives every day.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="problem-card glass-card">
+            <div class="problem-icon"><i class="fas fa-traffic-light"></i></div>
+            <h4>Traffic Congestion</h4>
+            <p>Ambulances get stuck in urban traffic, losing precious minutes during golden hour emergencies.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="problem-card glass-card">
+            <div class="problem-icon"><i class="fas fa-clock"></i></div>
+            <h4>Delayed Ambulances</h4>
+            <p>Average ambulance response time exceeds critical windows due to poor dispatch coordination.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="problem-card glass-card">
+            <div class="problem-icon"><i class="fas fa-users-slash"></i></div>
+            <h4>Poor Coordination</h4>
+            <p>No unified platform connecting patients, hospitals, and ambulance providers in real time.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="problem-card glass-card">
+            <div class="problem-icon"><i class="fas fa-phone-alt"></i></div>
+            <h4>Manual Phone Calls</h4>
+            <p>Emergency requests still rely on fragmented phone calls, causing delays and miscommunication.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+          <div class="problem-card glass-card">
+            <div class="problem-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h4>Location Confusion</h4>
+            <p>Inaccurate location sharing leads to ambulances arriving at wrong addresses.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+          <div class="problem-card glass-card">
+            <div class="problem-icon"><i class="fas fa-info-circle"></i></div>
+            <h4>Incomplete Information</h4>
+            <p>Hospitals receive incomplete patient data, unable to prepare adequately before arrival.</p>
+          </div>
+        </div>
+      </div>
+      <div class="problem-cta text-center mt-5" data-aos="fade-up">
+        <p class="problem-tagline">Every second counts in an emergency. <span class="text-gradient fw-bold">We're fixing this.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: CURRENT SOLUTION (AEROLIFELINE) ========== -->
+  <section id="solution" class="section solution-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">Our Solution</span>
+        <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" class="solution-logo">
+        <h2 class="section-title">The <span class="text-gradient">Complete</span> Emergency Response Platform</h2>
+        <p class="section-subtitle">AeroLifeLine connects every stakeholder in the emergency response chain through one intelligent platform.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-hand-paper"></i></div>
+            <h4>One Tap SOS</h4>
+            <p>Patients can trigger an emergency alert with a single tap on their mobile device.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-satellite-dish"></i></div>
+            <h4>Automatic GPS</h4>
+            <p>Precise location is captured and shared instantly with dispatch and hospitals.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-chart-bar"></i></div>
+            <h4>Hospital Dashboard</h4>
+            <p>Real-time emergency feeds with patient information for better preparedness.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h4>Driver App</h4>
+            <p>Turn-by-turn navigation optimized for emergency vehicles with traffic awareness.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-cogs"></i></div>
+            <h4>Admin Dashboard</h4>
+            <p>Complete fleet and operations management with analytics and reporting.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-robot"></i></div>
+            <h4>AI Dispatch</h4>
+            <p>Intelligent ambulance assignment based on proximity, traffic, and hospital capacity.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Live Tracking</h4>
+            <p>Real-time ambulance location tracking for hospitals and family members.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-bell"></i></div>
+            <h4>Notifications</h4>
+            <p>Automated alerts for every stage of the emergency response journey.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+          <div class="solution-card glass-card">
+            <div class="solution-icon"><i class="fas fa-cloud"></i></div>
+            <h4>Cloud Platform</h4>
+            <p>Scalable, secure cloud infrastructure powering the entire ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: HOW AEROLIFELINE WORKS ========== -->
+  <section id="how-it-works" class="section timeline-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">How It Works</span>
+        <h2 class="section-title">From Emergency to <span class="text-gradient">Arrival</span></h2>
+        <p class="section-subtitle">AeroLifeLine orchestrates the entire emergency response workflow in seconds.</p>
+      </div>
+      <div class="timeline mt-5">
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="timeline-marker">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <h4>Patient Requests Emergency</h4>
+            <p>One tap SOS from the patient mobile app triggers an urgent alert with location and medical info.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="timeline-marker">
+            <i class="fas fa-map-pin"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <h4>GPS Captured</h4>
+            <p>Precise geographic coordinates are captured and transmitted to the cloud platform instantly.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="timeline-marker">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <h4>Hospital Notified</h4>
+            <p>Nearest hospitals receive real-time alert with patient details, location, and estimated severity.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="timeline-marker">
+            <i class="fas fa-truck-medical"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <h4>Nearest Ambulance Assigned</h4>
+            <p>AI dispatch algorithm selects the closest available ambulance based on real-time traffic conditions.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+          <div class="timeline-marker">
+            <i class="fas fa-route"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <h4>Driver Navigation</h4>
+            <p>Ambulance driver receives optimized route with live traffic updates and hospital destination.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+          <div class="timeline-marker">
+            <i class="fas fa-procedures"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <h4>Hospital Prepares</h4>
+            <p>Emergency room receives ETA, patient vitals, and prepares medical team for immediate care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: TECHNOLOGY ========== -->
+  <section id="technology" class="section tech-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">Technology</span>
+        <h2 class="section-title">Built on <span class="text-gradient">Modern</span> Tech Stack</h2>
+        <p class="section-subtitle">Enterprise-grade technology powering life-saving emergency responses.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4>Patient Mobile App</h4>
+            <p>Cross-platform app for emergency requests, tracking, and hospital communication.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-desktop"></i></div>
+            <h4>Hospital Dashboard</h4>
+            <p>Real-time emergency monitoring with patient data and ambulance tracking.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-car"></i></div>
+            <h4>Driver App</h4>
+            <p>Navigation, dispatch alerts, and patient pickup confirmation in one interface.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Admin Panel</h4>
+            <p>Full fleet oversight, user management, and performance analytics dashboard.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <h4>Cloud Infrastructure</h4>
+            <p>Scalable cloud architecture ensuring 99.9% uptime for critical emergency services.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h4>Google Maps Integration</h4>
+            <p>Precise geolocation, traffic-aware routing, and real-time tracking capabilities.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-database"></i></div>
+            <h4>Realtime Database</h4>
+            <p>Instant data synchronization across all platform users and devices.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-robot"></i></div>
+            <h4>AI Dispatch</h4>
+            <p>Machine learning algorithms for optimal ambulance assignment and routing.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+          <div class="tech-card glass-card">
+            <div class="tech-icon"><i class="fas fa-code-branch"></i></div>
+            <h4>Future Route Intelligence</h4>
+            <p>Predictive analytics to anticipate emergency hotspots and pre-position resources.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: FOUNDER STORY ========== -->
+  <section id="story" class="section story-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up" data-aos-duration="800">
+          <div class="story-card glass-card">
+            <div class="story-quote"><i class="fas fa-quote-left"></i></div>
+            <blockquote>
+              AeroLifeLine is our current product — an AI-powered platform solving today's emergency coordination challenges. Our long-term vision is future air ambulance integration. But aircraft development takes years due to certification, engineering, and regulations. Instead of waiting years before making a difference, we built AeroLifeLine first. This creates immediate impact while building the digital foundation for future air medical mobility.
+            </blockquote>
+            <div class="story-author">
+              <div class="story-author-avatar">HK</div>
+              <div class="story-author-info">
+                <strong>Hemanth Kumar</strong>
+                <span>Founder, SkyFly Aviations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 8: ROADMAP ========== -->
+  <section id="roadmap" class="section roadmap-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">Roadmap</span>
+        <h2 class="section-title">Our Journey to <span class="text-gradient">Future</span> Medical Mobility</h2>
+        <p class="section-subtitle">A phased approach building capability and infrastructure for the future.</p>
+      </div>
+      <div class="roadmap-timeline mt-5">
+        <div class="roadmap-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="roadmap-phase phase-current">
+            <span class="phase-badge">Phase 1</span>
+            <span class="phase-status">Current</span>
+          </div>
+          <div class="roadmap-content glass-card">
+            <h4>AeroLifeLine MVP</h4>
+            <ul>
+              <li>Patient mobile application</li>
+              <li>Hospital dashboard</li>
+              <li>Driver navigation app</li>
+              <li>Admin control panel</li>
+              <li>AI dispatch engine</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="roadmap-phase">
+            <span class="phase-badge">Phase 2</span>
+            <span class="phase-status">Upcoming</span>
+          </div>
+          <div class="roadmap-content glass-card">
+            <h4>Hospital & Ambulance Partnerships</h4>
+            <ul>
+              <li>Hospital partnership onboarding</li>
+              <li>Ambulance fleet integration</li>
+              <li>City-wide deployment</li>
+              <li>Service optimization</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="roadmap-phase">
+            <span class="phase-badge">Phase 3</span>
+            <span class="phase-status">Planned</span>
+          </div>
+          <div class="roadmap-content glass-card">
+            <h4>AI Route Intelligence</h4>
+            <ul>
+              <li>Predictive emergency analytics</li>
+              <li>Intelligent dispatch optimization</li>
+              <li>Real-time traffic intelligence</li>
+              <li>Resource pre-positioning</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="roadmap-phase">
+            <span class="phase-badge">Phase 4</span>
+            <span class="phase-status">Future</span>
+          </div>
+          <div class="roadmap-content glass-card">
+            <h4>Future Air Ambulance Integration</h4>
+            <ul>
+              <li>Air mobility platform integration</li>
+              <li>Emergency air response coordination</li>
+              <li>Multi-modal dispatch ecosystem</li>
+              <li>Full spectrum emergency coverage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 9: FUTURE VISION ========== -->
+  <section id="vision" class="section vision-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
+          <span class="section-badge">Future Vision</span>
+          <h2 class="section-title">The Future of <span class="text-gradient">Emergency Medical Mobility</span></h2>
+          <p class="vision-text">SkyFly Aviations envisions a future where air ambulances are integrated into the emergency response ecosystem, reducing response time where traditional road transportation is delayed.</p>
+          <p class="vision-text">This is our long-term research vision. By combining our AeroLifeLine digital platform with future air medical mobility, we envision a future where emergency response is not limited by roads, traffic, or distance.</p>
+          <div class="vision-highlights">
+            <div class="vision-highlight-item">
+              <i class="fas fa-rocket"></i>
+              <span>Future Air Medical Mobility</span>
+            </div>
+            <div class="vision-highlight-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>10x Faster Response Times</span>
+            </div>
+            <div class="vision-highlight-item">
+              <i class="fas fa-globe-asia"></i>
+              <span>Pan-India Emergency Coverage</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="800">
+          <div class="vision-visual">
+            <div class="vision-glow"></div>
+            <div class="vision-icon-grid">
+              <div class="vision-icon-item"><i class="fas fa-helicopter"></i></div>
+              <div class="vision-icon-item"><i class="fas fa-drone"></i></div>
+              <div class="vision-icon-item"><i class="fas fa-ambulance"></i></div>
+              <div class="vision-icon-item"><i class="fas fa-hospital"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 10: WHY CHOOSE US ========== -->
+  <section id="why-us" class="section why-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">Why Choose Us</span>
+        <h2 class="section-title">What Makes Us <span class="text-gradient">Different</span></h2>
+        <p class="section-subtitle">We combine healthcare expertise with cutting-edge technology to save lives.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="why-card glass-card">
+            <div class="why-icon"><i class="fas fa-brain"></i></div>
+            <h4>AI Powered</h4>
+            <p>Intelligent algorithms optimize every aspect of emergency response coordination.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="why-card glass-card">
+            <div class="why-icon"><i class="fas fa-heartbeat"></i></div>
+            <h4>Emergency Focused</h4>
+            <p>Every feature is designed specifically for life-saving emergency scenarios.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="why-card glass-card">
+            <div class="why-icon"><i class="fas fa-stethoscope"></i></div>
+            <h4>Healthcare Innovation</h4>
+            <p>Built with deep understanding of healthcare workflows and patient needs.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="why-card glass-card">
+            <div class="why-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+            <h4>Scalable Platform</h4>
+            <p>Cloud-native architecture that scales from one city to nationwide operations.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+          <div class="why-card glass-card">
+            <div class="why-icon"><i class="fas fa-rocket"></i></div>
+            <h4>Future Ready</h4>
+            <p>Architecture designed for seamless integration with future air ambulance services.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+          <div class="why-card glass-card">
+            <div class="why-icon"><i class="fas fa-handshake"></i></div>
+            <h4>Smart Coordination</h4>
+            <p>Unified platform connecting all stakeholders in real-time for better outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 11: FOUNDER ========== -->
+  <section id="founder" class="section founder-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="800">
+          <div class="founder-card glass-card text-center">
+            <div class="founder-avatar">HK</div>
+            <h3 class="founder-name">Hemanth Kumar</h3>
+            <p class="founder-role">Founder & CEO, SkyFly Aviations</p>
+            <div class="founder-mission">
+              <i class="fas fa-quote-left"></i>
+              <p class="founder-quote">Saving Time Saves Lives. Building intelligent emergency healthcare technology today while preparing for the future of air medical mobility.</p>
+            </div>
+            <div class="founder-social">
+              <a href="https://www.linkedin.com/in/hemanth-kumar-bhimavarapu-a70131271/" target="_blank" rel="noopener noreferrer" class="founder-social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="mailto:info@skyflyaviations.in" class="founder-social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 12: CONTACT ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+        <span class="section-badge">Contact</span>
+        <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="section-subtitle">Partnerships, collaborations, and inquiries welcome.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+          <div class="contact-partners">
+            <h4>We're Looking to Connect With</h4>
+            <div class="partner-tags">
+              <span class="partner-tag"><i class="fas fa-hospital"></i> Hospital Partnerships</span>
+              <span class="partner-tag"><i class="fas fa-landmark"></i> Government</span>
+              <span class="partner-tag"><i class="fas fa-chart-line"></i> Investors</span>
+              <span class="partner-tag"><i class="fas fa-flask"></i> Incubators</span>
+              <span class="partner-tag"><i class="fas fa-handshake"></i> Technology Partners</span>
+            </div>
+            <div class="contact-info mt-4">
+              <div class="contact-info-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@skyflyaviations.in">info@skyflyaviations.in</a>
+              </div>
+              <div class="contact-info-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/company/skyfly-aviations/" target="_blank" rel="noopener noreferrer">SkyFly Aviations</a>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Hyderabad, India</span>
+              </div>
+            </div>
+            <div class="contact-map mt-4">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.885983849065!2d78.3910063!3d17.4847986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb918e3f28bd05%3A0x75a278448dc7cb6f!2s137%2C%20Kukatpally%20Housing%20Board%20Colony%2C%20KPHB%20Phase%202%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500072!5e0!3m2!1sen!2sin!4v1" width="100%" height="220" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+          <div class="contact-form-wrapper glass-card">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="formName" placeholder="Your Name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" id="formEmail" placeholder="Email Address" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" id="formOrganization" placeholder="Organization">
+                </div>
+                <div class="col-12">
+                  <select class="form-select" id="formInterestedIn">
+                    <option selected disabled value="">I'm interested in...</option>
+                    <option>Hospital Partnership</option>
+                    <option>Investment Opportunity</option>
+                    <option>Technology Collaboration</option>
+                    <option>Incubation Program</option>
+                    <option>Media & Press</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" id="formMessage" rows="5" placeholder="Your Message" required></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <div class="col-12">
+                  <div id="formStatus" class="form-status" style="display: none;"></div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" id="formSubmitBtn" class="btn btn-primary btn-lg w-100">
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="footer-logos">
+              <img src="assets/images/logo.png" alt="SkyFly Aviations" height="35" class="footer-logo">
+              <span class="footer-logo-separator">+</span>
+              <img src="assets/images/aerolifeline-logo.png" alt="AeroLifeLine" height="30" class="footer-product-logo">
+            </div>
+            <p class="footer-text">SkyFly Aviations — AeroLifeLine</p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-links">
+              <a href="privacy.html" class="footer-link">Privacy Policy</a>
+              <a href="terms.html" class="footer-link">Terms of Service</a>
+              <a href="https://www.linkedin.com/company/skyfly-aviations/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:info@skyflyaviations.in" class="footer-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SkyFly Aviations. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
